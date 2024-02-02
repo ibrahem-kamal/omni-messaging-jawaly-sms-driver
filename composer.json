@@ -1,29 +1,32 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "ibrahem-kamal/omni-messaging-jawaly-sms-driver",
+    "description": "This is my package omni-messaging-jawaly-sms-driver",
     "keywords": [
-        ":vendor_name",
+        "ibrahemkamal",
         "laravel",
-        ":package_slug"
+        "omni-messaging-jawaly-sms-driver"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/ibrahem-kamal/omni-messaging-jawaly-sms-driver",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "ibrahemkamal",
+            "email": "ibrahem.kamal70@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "guzzlehttp/guzzle": "^7.8",
+        "ibrahem-kamal/omni-messaging": "dev-development",
+        "illuminate/contracts": "^10.0",
+        "spatie/laravel-package-tools": "^1.14.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^7.8",
         "larastan/larastan": "^2.0.1",
+        "laravel/pint": "^1.0",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^7.8",
         "orchestra/testbench": "^8.8",
         "pestphp/pest": "^2.20",
         "pestphp/pest-plugin-arch": "^2.0",
@@ -35,19 +38,19 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Ibrahemkamal\\OmniMessagingJawalySmsDriver\\": "src/",
+            "Ibrahemkamal\\OmniMessagingJawalySmsDriver\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Ibrahemkamal\\OmniMessagingJawalySmsDriver\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-omni-messaging-jawaly-sms-driver --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -70,13 +73,19 @@
             "phpstan/extension-installer": true
         }
     },
+    "repositories": {
+        "ibrahem-kamal/omni-messaging": {
+            "type": "path",
+            "url": "../omni-messaging"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Ibrahemkamal\\OmniMessagingJawalySmsDriver\\OmniMessagingJawalySmsDriverServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "OmniMessagingJawalySmsDriver": "Ibrahemkamal\\OmniMessagingJawalySmsDriver\\Facades\\OmniMessagingJawalySmsDriver"
             }
         }
     },
