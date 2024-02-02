@@ -9,7 +9,7 @@ test('it implements WebhookParserContract', function () {
 
 test('it can parse the payload', function () {
     $parser = app(JawalyWebhookParser::class);
-    $payload = json_decode(file_get_contents(__DIR__ . '/../Mock/Responses/WebhookPayload.json'), true);
+    $payload = json_decode(file_get_contents(__DIR__.'/../Mock/Responses/WebhookPayload.json'), true);
     $parser->parsePayload($payload);
     expect($parser->getParsedNumbers())->toHaveCount(2);
     expect($parser->getParsedNumbers()[0]->getNumber())->toBe($payload['numbers'][0]['number']);

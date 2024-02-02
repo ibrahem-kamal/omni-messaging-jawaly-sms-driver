@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         Http::preventStrayRequests();
 
         Factory::guessFactoryNamesUsing(
-            fn(string $modelName) => 'Ibrahemkamal\\OmniMessagingJawalySmsDriver\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Ibrahemkamal\\OmniMessagingJawalySmsDriver\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

@@ -25,9 +25,8 @@ test('it has the correct channel name', function () {
     expect((new OmniMessagingJawalySmsDriver())->getChannelName())->toBe('jawaly');
 });
 
-
 test('it can send a message', function () {
-    $payload = json_decode(file_get_contents(__DIR__ . '/Mock/Responses/SuccessResponse.json'), true);
+    $payload = json_decode(file_get_contents(__DIR__.'/Mock/Responses/SuccessResponse.json'), true);
     Http::fake([
         'api-sms.4jawaly.com/api/v1/account/area/sms/send' => Http::response($payload),
     ]);
@@ -37,7 +36,7 @@ test('it can send a message', function () {
 });
 
 test('it can send a message to multiple numbers', function () {
-    $payload = json_decode(file_get_contents(__DIR__ . '/Mock/Responses/SuccessResponse.json'), true);
+    $payload = json_decode(file_get_contents(__DIR__.'/Mock/Responses/SuccessResponse.json'), true);
     Http::fake([
         'api-sms.4jawaly.com/api/v1/account/area/sms/send' => Http::response($payload),
     ]);
@@ -48,7 +47,7 @@ test('it can send a message to multiple numbers', function () {
 });
 
 test('it can get the balance', function () {
-    $payload = json_decode(file_get_contents(__DIR__ . '/Mock/Responses/GetBalanceResponse.json'), true);
+    $payload = json_decode(file_get_contents(__DIR__.'/Mock/Responses/GetBalanceResponse.json'), true);
     Http::fake([
         'api-sms.4jawaly.com/api/v1/account/area/me/*' => Http::response($payload),
     ]);
@@ -69,9 +68,8 @@ test('it can display getBalance errors', function () {
     expect($response->getErrorsArray())->toBe([]);
 });
 
-
 test('it can display sending errors with success request code', function () {
-    $payload = json_decode(file_get_contents(__DIR__ . '/Mock/Responses/SuccessResponseWithSendingError.json'), true);
+    $payload = json_decode(file_get_contents(__DIR__.'/Mock/Responses/SuccessResponseWithSendingError.json'), true);
     Http::fake([
         'api-sms.4jawaly.com/api/v1/account/area/sms/send' => Http::response($payload, 200),
     ]);
@@ -81,23 +79,22 @@ test('it can display sending errors with success request code', function () {
 });
 
 test('it can display sending errors', function () {
-    $error400Response = json_decode(file_get_contents(__DIR__ . '/Mock/Responses/InvalidSenderResponse.json'), true);
-    $error422Response = json_decode(file_get_contents(__DIR__ . '/Mock/Responses/EmptyMessageResponse.json'), true);
+    $error400Response = json_decode(file_get_contents(__DIR__.'/Mock/Responses/InvalidSenderResponse.json'), true);
+    $error422Response = json_decode(file_get_contents(__DIR__.'/Mock/Responses/EmptyMessageResponse.json'), true);
     Http::fake([
         'api-sms.4jawaly.com/api/v1/account/area/sms/send' => Http::sequence()
             ->push($error400Response, 400)
             ->push($error422Response, 422)
-            ->push([], 500)
+            ->push([], 500),
     ]);
 
     $response = sendSmsRequest();
     expect($response->isSuccess())->toBeFalse()->and($response->getErrorsString())->toBe($error400Response['message']);
     $response = sendSmsRequest();
-    expect($response->isSuccess())->toBeFalse()->and($response->getErrorsString())->toBe("Empty message body");
+    expect($response->isSuccess())->toBeFalse()->and($response->getErrorsString())->toBe('Empty message body');
     $response = sendSmsRequest();
-    expect($response->isSuccess())->toBeFalse()->and($response->getErrorsArray())->toBe(["Failed with status code 500"]);
+    expect($response->isSuccess())->toBeFalse()->and($response->getErrorsArray())->toBe(['Failed with status code 500']);
 });
-
 
 function sendSmsRequest()
 {

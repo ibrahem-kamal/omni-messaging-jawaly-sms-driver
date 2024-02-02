@@ -2,7 +2,6 @@
 
 namespace Ibrahemkamal\OmniMessagingJawalySmsDriver;
 
-
 use Ibrahemkamal\OmniMessaging\Common\AbstractMessagingDriver;
 use Ibrahemkamal\OmniMessaging\Concerns\MessagingDriverResponse;
 use Ibrahemkamal\OmniMessaging\Contracts\WebhookParserContract;
@@ -28,18 +27,18 @@ class OmniMessagingJawalySmsDriver extends AbstractMessagingDriver
     public function getBalance(string $sender = '', array $options = []): MessagingDriverResponse
     {
         //@TODO: remove the available options to documentations and remove the static values
-        $response = $this->buildClient('get', $this->baseUrl . '/me/packages', [
+        $response = $this->buildClient('get', $this->baseUrl.'/me/packages', [
             'is_active' => 'true',
             'order_by' => 'id',
             'order_by_type' => 'desc',
             'page' => 1,
             'page_size' => 10,
-            'return_collections' => 1
+            'return_collections' => 1,
         ]);
         if ($response->successful() && $response->json('code') == 200) {
             return $this->messagingDriverResponse->setSuccess(true)->setData([
                 'total_balance' => $response->json()['total_balance'],
-                'items' => $response->json()['items']
+                'items' => $response->json()['items'],
             ]);
         } else {
             return $this->messagingDriverResponse->setSuccess(false)->setErrors($response->json());
@@ -55,23 +54,23 @@ class OmniMessagingJawalySmsDriver extends AbstractMessagingDriver
     {
         $mobileNumbers = Arr::wrap(($mobileNumbers));
         $formattedNumbers = $this->formatPhoneNumbers($mobileNumbers);
-        $response = $this->buildClient('post', $this->baseUrl . '/sms/send', [
+        $response = $this->buildClient('post', $this->baseUrl.'/sms/send', [
             'messages' => [
                 [
                     'text' => $message,
                     'numbers' => $formattedNumbers,
-                    'sender' => $sender
-                ]
-            ]
+                    'sender' => $sender,
+                ],
+            ],
         ]);
         if ($response->successful()) {
-            if (isset($response->json()["messages"][0]["err_text"])) {
-                return $this->messagingDriverResponse->setSuccess(false)->setErrors([$response->json()["messages"][0]["err_text"]]);
+            if (isset($response->json()['messages'][0]['err_text'])) {
+                return $this->messagingDriverResponse->setSuccess(false)->setErrors([$response->json()['messages'][0]['err_text']]);
             } else {
-                return $this->messagingDriverResponse->setSuccess(true)->setData(['job_id' => $response->json()["job_id"]]);
+                return $this->messagingDriverResponse->setSuccess(true)->setData(['job_id' => $response->json()['job_id']]);
             }
         } elseif ($response->status() == 400) {
-            return $this->messagingDriverResponse->setSuccess(false)->setErrors($response->json("message"));
+            return $this->messagingDriverResponse->setSuccess(false)->setErrors($response->json('message'));
         } elseif ($response->status() == 422) {
             return $this->messagingDriverResponse->setSuccess(false)->setErrors([__('Empty message body')]);
         } else {
@@ -83,6 +82,7 @@ class OmniMessagingJawalySmsDriver extends AbstractMessagingDriver
     {
         $username = $this->getConfigOption('username');
         $password = $this->getConfigOption('password');
+
         return Http::withBasicAuth($username, $password)
             ->asJson()
             ->$method($url, $data);
@@ -93,17 +93,14 @@ class OmniMessagingJawalySmsDriver extends AbstractMessagingDriver
         return new Parsers\JawalyWebhookParser();
     }
 
-    /**
-     * @param array $mobileNumbers
-     * @return array
-     */
     public function formatPhoneNumbers(array $mobileNumbers): array
     {
         $formattedNumbers = [];
         foreach ($mobileNumbers as $mobileNumber) {
             $formattedNumbers[] = Str::of($mobileNumber)->replaceFirst('966', '0')
                 ->remove('+')->value();
-        };
+        }
+
         return $formattedNumbers;
     }
 }
