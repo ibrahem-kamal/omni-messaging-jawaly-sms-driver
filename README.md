@@ -4,8 +4,8 @@ ___
 **this package is designed to work with [Omni Messaging](https://github.com/ibrahem-kamal/omni-messaging)**
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ibrahem-kamal/omni-messaging-jawaly-sms-driver.svg?style=flat-square)](https://packagist.org/packages/ibrahem-kamal/omni-messaging-jawaly-sms-driver)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ibrahem-kamal/omni-messaging-jawaly-sms-driver/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ibrahem-kamal/omni-messaging-jawaly-sms-driver/actions?query=workflow%3Arun-tests)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ibrahem-kamal/omni-messaging-jawaly-sms-driver/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ibrahem-kamal/omni-messaging-jawaly-sms-driver/actions?query=workflow%3A"Fix+PHP+code+style+issues")
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ibrahem-kamal/omni-messaging-jawaly-sms-driver/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ibrahem-kamal/omni-messaging-jawaly-sms-driver/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ibrahem-kamal/omni-messaging-jawaly-sms-driver/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ibrahem-kamal/omni-messaging-jawaly-sms-driver/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ibrahem-kamal/omni-messaging-jawaly-sms-driver.svg?style=flat-square)](https://packagist.org/packages/ibrahem-kamal/omni-messaging-jawaly-sms-driver)
 
 [Jawaly Sms](https://www.4jawaly.com/) Driver for Omni Messaging.
