@@ -1,0 +1,193 @@
+{
+    "code": 200,
+    "message": "تم",
+    "total_balance": 985,
+    "items": {
+        "current_page": 1,
+        "data": [
+            {
+                "id": 11111,
+                "package_points": 1000,
+                "current_points": 985,
+                "last_month_year": null,
+                "last_diff_points": 0,
+                "is_closed": 0,
+                "expire_at": "2025-01-29T21:00:00.000000Z",
+                "account_id": 1234,
+                "sub_account_id": null,
+                "by_account_id": 1234,
+                "system_uuid": "98038h95-c025-22pp-684w-4al68492329e",
+                "is_open": 1,
+                "ticket_id": 11111,
+                "payment_method_id": 3,
+                "bank_id": null,
+                "price": "110.000",
+                "tax": "16.500",
+                "fees": "0.000",
+                "total": "126.500",
+                "p_type": 1,
+                "account_package_id": null,
+                "last_action_at": "2024-01-31 13:53:51",
+                "is_send_expire": 0,
+                "created_at": "2024-01-31T10:53:51.000000Z",
+                "updated_at": "2024-02-02T21:47:04.000000Z",
+                "networks": [
+                    {
+                        "id": 11,
+                        "image": "258fa6b6a9f2676ddf7623571010fe82.png",
+                        "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/networks/258fa6b6a9f2676ddf7623571010fe82.png",
+                        "network_tags": [
+                            {
+                                "id": 3,
+                                "image": "c4223224ebd5ca0dcb3f62a44e8abb15.png",
+                                "title": "اتصالات السعوديه",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/c4223224ebd5ca0dcb3f62a44e8abb15.png"
+                            },
+                            {
+                                "id": 6,
+                                "image": "ce7c8e6700b96eec8086266a68efd1c0.png",
+                                "title": "موبايلي",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/ce7c8e6700b96eec8086266a68efd1c0.png"
+                            },
+                            {
+                                "id": 7,
+                                "image": "95699a58810dd710bcaea77eee7cc03f.png",
+                                "title": "زين",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/95699a58810dd710bcaea77eee7cc03f.png"
+                            },
+                            {
+                                "id": 8,
+                                "image": "abe7729337a17519dbdb1d3bb95d98d4.png",
+                                "title": "فيرجين ",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/abe7729337a17519dbdb1d3bb95d98d4.png"
+                            },
+                            {
+                                "id": 19,
+                                "image": "4da5114784fc33dd0397b7188a233db0.png",
+                                "title": "ليبارا",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/4da5114784fc33dd0397b7188a233db0.png"
+                            }
+                        ]
+                    }
+                ],
+                "used_balance": 15,
+                "is_completed": false,
+                "package": {
+                    "id": 141,
+                    "title_ar": "رسائل الجوال النصية القصيرة"
+                },
+                "sub_account": null
+            },
+            {
+                "id": 2222,
+                "package_points": 79135,
+                "current_points": 0,
+                "last_month_year": null,
+                "last_diff_points": 0,
+                "is_closed": 0,
+                "expire_at": "2024-03-10T21:00:00.000000Z",
+                "account_id": 5020,
+                "sub_account_id": null,
+                "by_account_id": null,
+                "system_uuid": "L6954",
+                "is_open": 1,
+                "ticket_id": null,
+                "payment_method_id": 0,
+                "bank_id": 0,
+                "price": "0.000",
+                "tax": "0.000",
+                "fees": "0.000",
+                "total": "0.000",
+                "p_type": 1,
+                "account_package_id": null,
+                "last_action_at": "2023-08-27 17:52:48",
+                "is_send_expire": 0,
+                "created_at": "2023-03-12T07:52:10.000000Z",
+                "updated_at": "2023-10-01T11:09:10.000000Z",
+                "networks": [
+                    {
+                        "id": 11,
+                        "image": "258fa6b6a9f2676ddf7623571010fe82.png",
+                        "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/networks/258fa6b6a9f2676ddf7623571010fe82.png",
+                        "network_tags": [
+                            {
+                                "id": 3,
+                                "image": "c4223224ebd5ca0dcb3f62a44e8abb15.png",
+                                "title": "اتصالات السعوديه",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/c4223224ebd5ca0dcb3f62a44e8abb15.png"
+                            },
+                            {
+                                "id": 6,
+                                "image": "ce7c8e6700b96eec8086266a68efd1c0.png",
+                                "title": "موبايلي",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/ce7c8e6700b96eec8086266a68efd1c0.png"
+                            },
+                            {
+                                "id": 7,
+                                "image": "95699a58810dd710bcaea77eee7cc03f.png",
+                                "title": "زين",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/95699a58810dd710bcaea77eee7cc03f.png"
+                            },
+                            {
+                                "id": 8,
+                                "image": "abe7729337a17519dbdb1d3bb95d98d4.png",
+                                "title": "فيرجين ",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/abe7729337a17519dbdb1d3bb95d98d4.png"
+                            },
+                            {
+                                "id": 19,
+                                "image": "4da5114784fc33dd0397b7188a233db0.png",
+                                "title": "ليبارا",
+                                "network_id": 11,
+                                "image_path": "https://4jawaly-dev.ams3.digitaloceanspaces.com/network-tags/4da5114784fc33dd0397b7188a233db0.png"
+                            }
+                        ]
+                    }
+                ],
+                "used_balance": 79135,
+                "is_completed": true,
+                "package": {
+                    "id": 63,
+                    "title_ar": "باقه الرصيد المنقول"
+                },
+                "sub_account": null
+            }
+        ],
+        "first_page_url": "https://api-sms.4jawaly.com/api/v1/account/area/me/packages?page=1",
+        "from": 1,
+        "last_page": 1,
+        "last_page_url": "https://api-sms.4jawaly.com/api/v1/account/area/me/packages?page=1",
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; السابق",
+                "active": false
+            },
+            {
+                "url": "https://api-sms.4jawaly.com/api/v1/account/area/me/packages?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": null,
+                "label": "التالي &raquo;",
+                "active": false
+            }
+        ],
+        "next_page_url": null,
+        "path": "https://api-sms.4jawaly.com/api/v1/account/area/me/packages",
+        "per_page": 10,
+        "prev_page_url": null,
+        "to": 2,
+        "total": 2
+    }
+}
