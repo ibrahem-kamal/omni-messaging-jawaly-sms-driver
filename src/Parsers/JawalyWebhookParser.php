@@ -2,13 +2,11 @@
 
 namespace Ibrahemkamal\OmniMessagingJawalySmsDriver\Parsers;
 
-
 use Ibrahemkamal\OmniMessaging\Common\Parsers\AbstractWebhookParse;
 use Ibrahemkamal\OmniMessaging\Common\Parsers\Resources\SmsNumber;
 
 class JawalyWebhookParser extends AbstractWebhookParse
 {
-
     public function parsePayload(array $payload): AbstractWebhookParse
     {
         $smsMessage = $payload['sms_message'];
@@ -22,6 +20,7 @@ class JawalyWebhookParser extends AbstractWebhookParse
                 ->setError($number['error_code_string'] ?? '');
             $this->addParsedNumber($parsedNumber);
         }
+
         return $this;
     }
 }
