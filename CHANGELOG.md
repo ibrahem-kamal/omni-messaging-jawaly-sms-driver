@@ -2,6 +2,10 @@
 
 All notable changes to `omni-messaging-jawaly-sms-driver` will be documented in this file.
 
+## V1.0.1 - 2024-02-05
+
+fix local dependencies
+
 ## V1.0.0 - 2024-02-05
 
 ### What's Changed
