@@ -1,6 +1,6 @@
 {
     "name": "ibrahem-kamal/omni-messaging-jawaly-sms-driver",
-    "description": "This is my package omni-messaging-jawaly-sms-driver",
+    "description": "omni-messaging-jawaly-sms-driver for Omni Messaging library",
     "keywords": [
         "ibrahemkamal",
         "laravel",
@@ -71,12 +71,6 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
-        }
-    },
-    "repositories": {
-        "ibrahem-kamal/omni-messaging": {
-            "type": "path",
-            "url": "../omni-messaging"
         }
     },
     "extra": {
