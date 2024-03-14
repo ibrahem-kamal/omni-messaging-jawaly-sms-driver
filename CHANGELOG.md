@@ -2,6 +2,10 @@
 
 All notable changes to `omni-messaging-jawaly-sms-driver` will be documented in this file.
 
+## 2.0 - 2024-03-14
+
+**Full Changelog**: https://github.com/ibrahem-kamal/omni-messaging-jawaly-sms-driver/compare/1.0.1...2.0
+
 ## V1.0.1 - 2024-02-05
 
 fix local dependencies
