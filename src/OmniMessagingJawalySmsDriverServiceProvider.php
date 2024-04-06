@@ -21,6 +21,11 @@ class OmniMessagingJawalySmsDriverServiceProvider extends PackageServiceProvider
 
     public function registeringPackage()
     {
+
+    }
+
+    public function packageRegistered()
+    {
         OmniMessaging::extend('jawaly', function ($app) {
             return new OmniMessagingJawalySmsDriver();
         });
